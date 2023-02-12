@@ -1,4 +1,4 @@
-# terraform-config
+# terraform-cloudflare-tunnel-module
 
 ![Terraform CLI](https://github.com/Sillock-Inc/terraform-cloudflare-tunnel-module/actions/workflows/continuous-integration.yml/badge.svg)
 [![GitHub release](https://img.shields.io/github/release/Sillock-Inc/terraform-cloudflare-tunnel-module)](https://github.com/Sillock-Inc/terraform-cloudflare-tunnel-module/releases)
