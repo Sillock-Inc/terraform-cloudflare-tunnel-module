@@ -1,4 +1,4 @@
-# terraform-config
+# terraform-cloudflare-tunnel-module
 
 ![Terraform CLI](https://github.com/Sillock-Inc/terraform-cloudflare-tunnel-module/actions/workflows/continuous-integration.yml/badge.svg)
 [![GitHub release](https://img.shields.io/github/release/Sillock-Inc/terraform-cloudflare-tunnel-module)](https://github.com/Sillock-Inc/terraform-cloudflare-tunnel-module/releases)
@@ -37,10 +37,6 @@ module "cloudflare_tunnel" {
 | <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | ~> 3.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
-## Modules
-
-No modules.
-
 ## Resources
 
 | Name | Type |
@@ -55,10 +51,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cloudflare_account_id"></a> [cloudflare\_account\_id](#input\_cloudflare\_account\_id) | Account ID for the Cloudflare account to provision resources under | `string` | n/a | yes |
-| <a name="input_ingress_rules"></a> [ingress\_rules](#input\_ingress\_rules) | Subdomain name and kubernetes KubeDNS name as a key value pair for Cloudflare tunnel config | <pre>list(object({<br>    subdomain = string<br>    address   = string<br>  }))</pre> | n/a | yes |
-| <a name="input_tunnel_name"></a> [tunnel\_name](#input\_tunnel\_name) | DNS name for the tunnel e.g. `example.com` | `string` | n/a | yes |
-| <a name="input_zone_dns"></a> [zone\_dns](#input\_zone\_dns) | DNS name for the tunnel e.g. `example.com` | `string` | n/a | yes |
+| <a name="input_cloudflare_account_id"></a> [cloudflare\_account\_id](#input\_cloudflare\_account\_id) | Account ID for the Cloudflare account to provision resources under | `string` | `""` | no |
+| <a name="input_ingress_rules"></a> [ingress\_rules](#input\_ingress\_rules) | Subdomain name and kubernetes KubeDNS name as a key value pair for Cloudflare tunnel config | <pre>list(object({<br>    subdomain = string<br>    address   = string<br>  }))</pre> | <pre>[<br>  {<br>    "address": "",<br>    "subdomain": ""<br>  }<br>]</pre> | no |
+| <a name="input_tunnel_name"></a> [tunnel\_name](#input\_tunnel\_name) | DNS name for the tunnel e.g. `example.com` | `string` | `""` | no |
+| <a name="input_zone_dns"></a> [zone\_dns](#input\_zone\_dns) | DNS name for the tunnel e.g. `example.com` | `string` | `""` | no |
 
 ## Outputs
 
