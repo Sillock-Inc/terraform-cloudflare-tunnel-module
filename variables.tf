@@ -16,11 +16,11 @@ variable "ingress_rules" {
     address   = string
   }))
   description = "Subdomain name and kubernetes KubeDNS name as a key value pair for Cloudflare tunnel config"
-  
-  default = [ {
-    address = ""
+
+  default = [{
+    address   = ""
     subdomain = ""
-  } ]
+  }]
 }
 
 variable "zone_dns" {
