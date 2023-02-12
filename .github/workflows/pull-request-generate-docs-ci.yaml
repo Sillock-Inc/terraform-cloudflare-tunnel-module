@@ -33,3 +33,26 @@ jobs:
         output-file: README.md
         output-method: inject
         git-push: "true"
+
+  terraform-validate:
+    name: 'Terraform Validate'
+    runs-on: ubuntu-latest
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Terraform Init
+      run: terraform init -backend=false
+
+    # Validates Terraform configuration
+    - name: Terraform Validate
+      run: terraform validate
