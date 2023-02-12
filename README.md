@@ -1,5 +1,8 @@
 # terraform-config
 
+![Terraform CLI](https://github.com/Sillock-Inc/terraform-cloudflare-tunnel-module/actions/workflows/continuous-integration.yml/badge.svg)
+[![GitHub release](https://img.shields.io/github/release/Sillock-Inc/terraform-cloudflare-tunnel-module)](https://github.com/Sillock-Inc/terraform-cloudflare-tunnel-module/releases)
+
 This module creates and manages Cloudflare tunnels, deployed with appropriate cname records
 
 ## Usage
