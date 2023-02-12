@@ -2,7 +2,8 @@ name: 'Continuous Integration pull request'
 
 on:
   pull_request:
-      
+
+jobs:      
   terraform-format:
     name: 'Terraform Format'
     runs-on: ubuntu-latest
