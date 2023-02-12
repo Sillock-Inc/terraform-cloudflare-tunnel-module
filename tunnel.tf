@@ -12,10 +12,10 @@ resource "cloudflare_argo_tunnel" "tunnel" {
 resource "cloudflare_tunnel_config" "config" {
   account_id = local.cloudflare_account_id
   tunnel_id  = cloudflare_argo_tunnel.tunnel.id
-  
+
   config {
 
-    dynamic "ingress_rule" {      
+    dynamic "ingress_rule" {
       for_each = local.ingress_rules
       iterator = item
       content {
@@ -25,7 +25,7 @@ resource "cloudflare_tunnel_config" "config" {
     }
 
     ingress_rule {
-      service  = "http://default:80"
+      service = "http://default:80"
     }
 
   }
