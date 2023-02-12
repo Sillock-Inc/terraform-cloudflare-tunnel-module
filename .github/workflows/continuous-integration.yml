@@ -43,8 +43,6 @@ jobs:
   terraform-docs:    
     name: Generate Terraform docs
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
     - name: Checkout
       uses: actions/checkout@v3
