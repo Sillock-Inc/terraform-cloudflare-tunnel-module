@@ -15,12 +15,6 @@ resource "cloudflare_tunnel_config" "config" {
 
   config {
 
-    warp_routing {
-      enabled = false
-    }
-    origin_request {
-      
-    }
     dynamic "ingress_rule" {
       for_each = local.ingress_rules
       iterator = item
